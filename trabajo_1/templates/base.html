@@ -31,24 +31,28 @@
     </button>
  
         <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll">
-        <li class="nav-item"><a class="nav-link" href="/all/" >Productos</a></li></ul>
-    {% if request.user.is_authenticated and request.user.is_superuser %}
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-        Creacion
-      </a>
-    <div class="navbar-collapse collapse" id="navbar5">
-        <ul class="navbar-nav">
-          <li><a class="dropdown-item" href="/meat/create-meats/">Carnes</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="/drink/create-drinks/">Bebidas</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="/bakery/create-bakeries/">Panaderia</a></li>
+        <li class="nav-item"><a class="nav-link" href="/all/" >Productos</a>
+        </li>
+             </ul>
       
+    {% if request.user.is_authenticated and request.user.is_superuser %}
+
+      <li class="nav-item dropdown">
+     
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Creacion
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/meat/create-meats/">Carnes</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/drink/create-drinks/">Bebidas</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/bakery/create-bakeries/">Panaderia</a></li>
+          </ul>
       </li>
       <li class="nav-item"><a class="nav-link" href="/stock/stock/" >Stock</a></li>
      </ul>
